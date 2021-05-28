@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container p-3">
+        <div class="container p-3">
+            <h3 class=" text-center text-info"><i class="fa fa-comments mr-3" aria-hidden="true"></i>Raizen Chat App
+            </h3>
+        </div>
+        <div class="messaging">
+            <div class="inbox_msg">
+                <div class="inbox_people">
+                    <div class="inbox_chat">
+                        <div class="chat_list active_chat">
+                            <div class="chat_people">
+                                <h3 class="text-center"><i class="fa fa-leaf mr-3 text-info" aria-hidden="true"></i>Room
+                                </h3>
+                            </div>
+                            <hr>
+                            <!-- <h4 id="room-name" class="text-center text-info"></h4> -->
+                            <a href="#" class="btn btn-info" id="room-name" style="margin-left: 170px;"></a>
+                        </div>
+
+                        <div class="chat_list active_chat">
+                            <div class="chat_people">
+                                <h3 class="text-center"><i class="fa fa-users mr-3 text-info"
+                                        aria-hidden="true"></i>Users</h3>
+                                <hr>
+                                <div class="container">
+                                    <ul class="userlist"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mesgs">
+                    <div class="msg_history" id="messageContainer">
+                        <a href="index.html" class="btn btn-info float-right leave">Leave Room</a>
+                        <div class="incoming_msg mt-5">
+                            <div class="private">
+                                <div class="others mt-1">
+                                    <p class=" mt-2 message-to"></p>
+                                  </div>
+                            </div>
+                            <div class="chat-message">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type_msg">
+                        <div id="priv"></div>
+                        <div id="typing">
+                        </div>
+                        <form action="" id="chat-form">
+                            <div class="input_msg_write" id="area">
+
+                                <input type="text" class="text-dark form-control" id="msg"
+                                    placeholder="Type a message" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js"
+                integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ=="
+                crossorigin="anonymous"></script>
+            <script src="/socket.io/socket.io.js"></script>
+            <script src="js/main.js"></script>
+</body>
+
+</html>
