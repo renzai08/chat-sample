@@ -8,6 +8,7 @@ const { userJoin, getCurrentUsers, userLeave, getRoomUsers } = require('./utils/
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
+const port=process.env.PORT || 5000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -78,5 +79,5 @@ io.on('connection', socket => {
 
 //Port
 
-const PORT =   process.env.port || 5000;
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+//const PORT =   process.env.port || 5000;
+server.listen(port, () => console.log(`Server running on port ${port}`));
